@@ -5,8 +5,10 @@ public class Main {
 
         //String entrada = "En un lugar de la Mancha de cuyo nombre no quiero acordarme";
         String entrada = "necreonoteitninnevrutsetnheinnodtohmeoeobesnmrxiubratslelriaerniavsair";
-        Transponedora t = new Transponedora(entrada);
+        Transponedora t = new Transponedora(entrada, 5);
 
+        //t.descifrar();
+        //t.descifrar(entrada,25);
         //Detector d = new Detector(entrada);
         //d.leerDiccionario();
         //d.detectarIdioma();
