@@ -7,7 +7,12 @@ public class Main {
         String entrada = "necreonoteitninnevrutsetnheinnodtohmeoeobesnmrxiubratslelriaerniavsair";
         String message;
 
-        Transponedora t = new Transponedora(entrada, 5);
-        message = t.crack();
+        for(int i=3; i<10; i++){
+            Transponedora t = new Transponedora(entrada, i);
+            message = t.crack();
+
+            Detector d = new Detector();
+            d.detectarIdioma(message);
+        }
     }
 }

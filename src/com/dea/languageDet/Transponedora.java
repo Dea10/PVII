@@ -22,7 +22,7 @@ public class Transponedora {
 
         chunkSize = (int)Math.pow((double)key,2);
         numberOfChunks = (int)Math.ceil((double)message.length()/(double)chunkSize);
-        messageAux = new char[3][chunkSize];
+        messageAux = new char[numberOfChunks][chunkSize];
         int c=0, c2=0;
 
         for(i=0; i<numberOfChunks; i++) {

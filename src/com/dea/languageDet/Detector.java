@@ -11,6 +11,9 @@ public class Detector {
     boolean esp = true;
     ArrayList<String> ES_dic = new ArrayList<String>();
 
+    public Detector(){
+
+    }
     public Detector(String cadena){
         this.cadena = cadena;
         cadena = cadena.toLowerCase();
@@ -54,6 +57,22 @@ public class Detector {
         }
 
         /* --- Fin de lectura de archivo --- */
+    }
+    public void detectarIdioma(String message){
+
+        leerDiccionario();
+
+        String palabras;
+        int coin=0, i=0;
+
+        for(i=0; i<ES_dic.size(); i++) {
+            if(message.contains(ES_dic.get(i))){
+                coin++;
+            }
+        }
+        System.out.println("Coincidencias: " + coin);
+        //si >= 50% coincide, entonces es Español
+        System.out.println("Español: " + ((coin>5) ? "True" : "False"));
     }
 
     public void detectarIdioma(){

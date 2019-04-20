@@ -40,4 +40,5 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 # dea gitignore added files
+.idea/workspace.xml
 .DS_Store
